@@ -6,6 +6,7 @@ import "./App.css"; //Imports the main CSS stylesheet
 import Hero from "./sections/Hero/Hero"; //Imports Hero Section JSX
 import Projects from "./sections/Projects/Projects"; //Imports Projects Section JSX
 import Skills from "./sections/Skills/Skills"; //Imports Skills Section JSX
+import Contact from "./sections/Contact/Contact"; //Imports Contact Section JSX
 import Footer from "./sections/Footer/Footer"; //Imports Footer Section JSX
 
 function App() {
