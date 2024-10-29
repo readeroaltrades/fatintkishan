@@ -1,17 +1,25 @@
-import "./App.css";
-import Hero from "./sections/Hero/Hero";
-import Projects from "./sections/Projects/Projects";
-import Skills from "./sections/Skills/Skills";
-import Contact from "./sections/Contact/Contact";
-import Footer from "./sections/Footer/Footer";
+/*App.jsx is the root component in React that serves as the organizer and renderer 
+for all other components.*/
+
+import "./App.css"; //Imports the main CSS stylesheet
+
+import Hero from "./sections/Hero/Hero"; //Imports Hero Section JSX
+import Projects from "./sections/Projects/Projects"; //Imports Projects Section JSX
+import Skills from "./sections/Skills/Skills"; //Imports Skills Section JSX
+import Footer from "./sections/Footer/Footer"; //Imports Footer Section JSX
+
 function App() {
     return (
         <>
-            <Hero />
-            <Projects />
-            <Skills />
-            <Contact />
-            <Footer />
+            <Hero /> {/*Hero Section*/}
+            {/* <Academics /> */}
+            {/* <Achievements /> */}
+            <Projects /> {/*Projects Section*/}
+            <Skills /> {/*Skills Section*/}
+            {/* <On Going /> */}
+            {/* <Interests /> */}
+            <Contact /> {/*Contact Section*/}
+            <Footer /> {/*Footer Section*/}
         </>
     );
 }

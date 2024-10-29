@@ -7,6 +7,7 @@ import linkedinDark from "../../assets/linkedin-dark.svg";
 import linkedinLight from "../../assets/linkedin-light.svg";
 import githubDark from "../../assets/github-dark.svg";
 import githubLight from "../../assets/github-light.svg";
+import resumeIcon from "../../assets/resume-icon.svg";
 import CV from "../../assets/cv.pdf";
 import { useTheme } from "../../common/ThemeContext";
 import styles from "./HeroStyles.module.css";
@@ -33,9 +34,7 @@ function Hero() {
                 />
             </div>
             <div className={styles.info}>
-                <h1>
-                    Fatin Tazwar Kishan
-                </h1>
+                <h1>Fatin Tazwar Kishan</h1>
                 <h2>Student</h2>
                 <span>
                     <a href="https://twitter.com/" target="_blank">
@@ -49,13 +48,16 @@ function Hero() {
                     </a>
                 </span>
                 <p className={styles.description}>
-                    Hello! I’m a CSE student passionate about coding, competitive
-                    programming, and digital art. I enjoy building projects that
-                    bring together tech and creativity—exploring, learning, and
-                    sharing it all as "Reader".
+                    Hello! I’m a CSE student passionate about coding,
+                    competitive programming, and digital art. I enjoy building
+                    projects that bring together tech and creativity—exploring,
+                    learning, and sharing it all as "Reader".
                 </p>
                 <a href={CV} download>
-                    <button className="hover">Resume</button>
+                    <button className="hover">
+                        <img src={resumeIcon} />
+                        <p>Resume</p>
+                    </button>
                 </a>
             </div>
         </section>

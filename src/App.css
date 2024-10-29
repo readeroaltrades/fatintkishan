@@ -1,21 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Baskervville:700|Nunito:400");
+
 :root {
-    --background-color: #fff;
-    --btn-color: #0987f2;
+    --text-color: #0f0618;
+    --background-color: #f5eefb;
+    --primary-color: #461e76;
+    --secondary-color: #dc74b6;
+    --accent-color: #ccb0e8;
+    --btn-color: #461e76;
     --btn-text-color: #fff;
-    --project-card-bg: #ffffff00;
-    --text-color: #222;
+    --project-card-bg: #0f0618;
+    --text-color: #0f0618;
     --form-text-color: #555;
     --footer-text-color: #888;
 }
 
 [data-theme="dark"] {
-    --background-color: #222;
-    --btn-color: #fff;
-    --btn-text-color: #222;
-    --project-card-bg: #fff;
-    --text-color: #fff;
-    --form-text-color: #fff;
+    --text-color: #f0e7f9;
+    --background-color: #0b0411;
+    --primary-color: #b189e1;
+    --secondary-color: #8b2365;
+    --accent-color: #33174f;
+    --btn-color: #b189e1;
+    --btn-text-color: #0f0618;
+    --project-card-bg: #f5eefb;
+    --text-color: #f5eefb;
+    --form-text-color: #f5eefb;
     --footer-text-color: #bbb;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+html {
+    scroll-snap-type: y proximity;
+}
+
+.hover {
+    cursor: pointer;
 }
 
 body {
@@ -23,12 +47,25 @@ body {
     display: flex;
     justify-content: center;
     margin: 0 auto 60px;
+    font-family: "Nunito";
+    font-weight: 400;
 }
 
-#root {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+section {
+    scroll-snap-align: center;
+}
+
+.sectionTitle {
+    margin-bottom: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Baskervville";
+    font-weight: 700;
 }
 
 h1,
@@ -40,26 +77,19 @@ p {
     padding: 0;
 }
 
-h2,
-h3,
-p {
-    font-family: "Roboto Mono", monospace;
-}
-
 h1,
 h2 {
     text-transform: uppercase;
 }
 
+h1 {
+    font-size: 32px;
+}
+
 h2,
 h3 {
     font-size: 20px;
-    margin-bottom: 15px;
-}
-
-h1 {
-    font-family: "Rubik", sans-serif;
-    font-size: 32px;
+    margin-bottom: 20px;
 }
 
 p {
@@ -67,14 +97,7 @@ p {
     font-weight: 300;
 }
 
-.sectionTitle {
-    margin-bottom: 30px;
-}
-
-.hover {
-   cursor: pointer; 
-}
-
+/* Media Query */
 @media (width >= 800px) {
     #root {
         gap: 100px;
@@ -84,7 +107,8 @@ p {
         font-size: 40px;
     }
 
-    h2, h3 {
+    h2,
+    h3 {
         font-size: 24px;
     }
 
@@ -92,6 +116,7 @@ p {
         font-size: 20px;
     }
 }
+
 @media (width >= 1400px) {
     #root {
         gap: 200px;
