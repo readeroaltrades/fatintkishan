@@ -4,6 +4,7 @@
     text-align: center;
     
     img {
+        min-width: 250PX;
         max-width: 250px;
         align-self: center;
         background-color: var(--background-color);
