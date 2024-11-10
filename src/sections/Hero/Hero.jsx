@@ -37,13 +37,19 @@ function Hero() {
                 <h1>Fatin Tazwar Kishan</h1>
                 <h2>Student</h2>
                 <span>
-                    <a href="https://twitter.com/" target="_blank">
+                    {/* <a href="https://twitter.com/" target="_blank">
                         <img src={twitterIcon} alt="Twitter Icon" />
-                    </a>
-                    <a href="https://github.com/" target="_blank">
+                    </a> */}
+                    <a
+                        href="https://github.com/readeroaltrades"
+                        target="_blank"
+                    >
                         <img src={githubIcon} alt="Github Icon" />
                     </a>
-                    <a href="https://linkedin.com/" target="_blank">
+                    <a
+                        href="https://linkedin.com/in/fatintkishan/"
+                        target="_blank"
+                    >
                         <img src={linkedinIcon} alt="LinkedIn Icon" />
                     </a>
                 </span>
