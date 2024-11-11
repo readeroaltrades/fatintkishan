@@ -1,57 +1,64 @@
+/* Root variables */
 :root {
-    --base-font-size: 16px;
-    --text-color: #0f0618;
-    --background-color: #f5eefb;
-    --primary-color: #461e76;
-    --secondary-color: #dc74b6;
-    --accent-color: #ccb0e8;
-    --btn-color: #461e76;
-    --btn-text-color: #fff;
-    --project-card-bg: #0f0618;
-    --text-color: #0f0618;
-    --form-text-color: #555;
-    --footer-text-color: #888;
+    --base-font-size: 16px; /* Base font size */
+    --text-color: #0f0618; /* Default text color */
+    --background-color: #f5eefb; /* Background color */
+    --primary-color: #461e76; /* Primary accent color */
+    --secondary-color: #dc74b6; /* Secondary accent color */
+    --accent-color: #ccb0e8; /* Additional accent color */
+    --btn-color: #461e76; /* Button background color */
+    --btn-text-color: #fff; /* Button text color */
+    --project-card-bg: #0f0618; /* Project card background color */
+    --form-text-color: #555; /* Text color in forms */
+    --footer-text-color: #888; /* Footer text color */
 }
 
+/* The data-theme="dark" selector applies an alternative color scheme for dark mode. */
 [data-theme="dark"] {
     --base-font-size: 16px;
-    --text-color: #f0e7f9;
-    --background-color: #0b0411;
-    --primary-color: #b189e1;
-    --secondary-color: #8b2365;
-    --accent-color: #33174f;
-    --btn-color: #b189e1;
-    --btn-text-color: #0f0618;
-    --project-card-bg: #f5eefb;
-    --text-color: #f5eefb;
-    --form-text-color: #f5eefb;
-    --footer-text-color: #bbb;
+    --text-color: #f0e7f9; /* Light text color */
+    --background-color: #0b0411; /* Dark background color */
+    --primary-color: #b189e1; /* Light primary color */
+    --secondary-color: #8b2365; /* Darker secondary accent */
+    --accent-color: #33174f; /* Dark accent color */
+    --btn-color: #b189e1; /* Button color in dark mode */
+    --btn-text-color: #0f0618; /* Button text color */
+    --project-card-bg: #f5eefb; /* Light project card background */
+    --form-text-color: #f5eefb; /* Light text color in forms */
+    --footer-text-color: #bbb; /* Footer text color in dark mode */
 }
 
+/* The #root element provides the main layout structure */
 #root {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+    display: flex; /* Turns the root container into a flex container*/
+    flex-direction: column; /* Sets the container's main axis to y aka vertical */
+    gap: 60px; /* Space between main sections */
 }
 
+/* Sets a pointer cursor to indicate interactivity */
 .hover {
     cursor: pointer;
 }
 
+/* Sets default properties of all body elements */
 body {
-    background-color: var(--background-color);
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 60px;
-    color: var(--text-color);
-    font-family: "Nunito", sans-serif;
-    font-weight: 400;
-    font-size: var(--base-font-size);
-    line-height: 1.5;
+    background-color: var(
+        --background-color
+    ); /* Default background color based on theme */
+    display: flex; /* Body container set to flex container so all its children are flex-items*/
+    justify-content: center; /* Aligns the child elements horizontally in the center of the flex container. */
+    margin: 0 auto 60px; /* Removes the top and left margins (0), auto-aligns the left and right margins to center the content horizontally, and adds 60px of space at the bottom (to avoid content touching the bottom of the page). */
+    color: var(--text-color); /* Sets the text color based on theme */
+    font-family: "Nunito", sans-serif; /* Applies "Nunito" font to the text inside the body. If unavailable fall back to sans-serif font. */
+    font-weight: 400; /* Sets font weight to 400, which is the normal weight. Neither bold or thin. */
+    font-size: var(
+        --base-font-size
+    ); /* Sets the default font size based on the root variable. */
+    line-height: 1.5; /* Sets the line height to 1.5 times of the font size. */
 }
 
 .sectionTitle {
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Adds 30px of space below elements with the class "sectionTitle". This creates vertical spacing between the section title and the content below it. */
 }
 
 h1,
@@ -65,7 +72,7 @@ h5 {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
@@ -97,15 +104,19 @@ p {
 /* Media Query */
 @media (max-width: 800px) {
     #root {
-        gap: 100px;
+        gap: 75px;
     }
 
     h1 {
         font-size: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     h2 {
         font-size: 1.75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     h3 {
@@ -113,11 +124,31 @@ p {
     }
 
     p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
 
-@media (min-width: 800px) and (max-width: 1400px) {
+@media (min-width: 1000px) {
+    #root {
+        gap: 100px;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #root {
+        gap: 100px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1400px) {
     #root {
         gap: 200px;
     }
